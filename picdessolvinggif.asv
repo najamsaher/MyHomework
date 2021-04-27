@@ -1,0 +1,10 @@
+img1 = im2double(imread('1.jpg'));
+img2 = im2double(imread('22.jpg'));
+iter = 30;
+nimg = face{1} - face{2};
+nimg = nimg./iter;
+for i=1:iter
+    face{2}=face{2} + nimg;
+    imshow(face{2});
+    pause(0.1);
+end
